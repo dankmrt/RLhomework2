@@ -276,8 +276,8 @@ class Iiwa_pub_sub : public rclcpp::Node
                 
                 //trajectory_point p = planner_.compute_trajectoryTrapezoidal(t_-initial_time,0.5,"circular_trajectory"); 
                 //trajectory_point p = planner_.compute_trajectory(t_-initial_time, "circular_trajectory");
-                trajectory_point p = planner_.compute_trajectoryTrapezoidal(t_-initial_time,0.5,"linear_trajectory"); 
-                //trajectory_point p = planner_.compute_trajectory(t_-initial_time, "linear_trajectory");
+                //trajectory_point p = planner_.compute_trajectoryTrapezoidal(t_-initial_time,0.5,"linear_trajectory"); 
+                trajectory_point p = planner_.compute_trajectory(t_-initial_time, "linear_trajectory");
                 // Compute EE frame
                 KDL::Frame cartpos = robot_->getEEFrame();           
 
